@@ -1,0 +1,18 @@
+.container-footer{
+    margin-top: 2rem;
+    padding: 1rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    /* style */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F1F8FF;
+}
+
+.container-footer p{
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #000000;
+}
