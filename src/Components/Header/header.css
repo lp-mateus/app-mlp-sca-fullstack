@@ -1,5 +1,4 @@
 .container{
-    min-width: 1500px;
     height: 5.5rem;
     display: flex;
     flex-direction: row;
@@ -26,7 +25,6 @@
 
 /* UTILS */
 .container-logo{
-    min-width: 600px;
     margin: 1rem;
     display: flex;
     flex-direction: row;
@@ -35,10 +33,45 @@
 }
 
 .container-link{
-    min-width: 600px;
     margin: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+}
+
+.btn-menu{
+    width: fit-content;
+    height: fit-content;
+    background: none;
+}
+
+.side-menu{
+    width: 45%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #2B88D9;
+    opacity: 0.9;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.side-menu p{
+    font-size: 1.5rem;
+    color: #ffff;
+    text-decoration: underline;
+    line-height: 5rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    .container-link li{display: none};
+}
+
+@media(min-width:600px){
+    .btn-menu{display: none};
+    .side-menu{display: none};
 }

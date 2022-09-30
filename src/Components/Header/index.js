@@ -1,13 +1,24 @@
 // CSS
 import './header.css';
+import ICON_MENU from '../../Assets/menu.png';
+import { useState } from 'react';
 
 const spanColor = {
     color: "#2B90DC",
 }
 
 function Header() {
-    return(
-        
+    // React state
+    const [style, setStyle] = useState();
+    const [links, setLinks] = useState([]);
+
+    const handleClick = () => {
+        console.log("you just clicked");
+        setStyle("side-menu");     
+        setLinks(["Link", "Link", "Link", "Link","Link"])   
+    }
+
+    return(        
         <header className='container'>
             <div className='container-logo'>
                 <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,6 +55,18 @@ function Header() {
                     <li>
                         Link
                     </li>
+
+                    <button className='btn-menu' onClick={handleClick}>
+                        <div className={style}>
+                            <img src={ICON_MENU} alt="Icone de menu"></img>
+                            <div>
+                            {links.map(element => {
+                                return(<p>{element}</p>)                                    
+                            })}
+                            </div>
+                        </div>                        
+                    </button>
+
                 </ul>
             </nav>
         </header>
