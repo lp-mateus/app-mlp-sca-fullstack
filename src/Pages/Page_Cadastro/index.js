@@ -15,7 +15,8 @@ function PageCadastro() {
             <Header />
             <br></br>
             <main>
-                <h1>MLP<span style={spanColor}>SCA</span> <br></br> Realize seu <span style={spanColor}>cadastro com formulário </span></h1>                
+                <h1><span style={spanColor}>FORMULÁRIO</span></h1>            
+                <h3>Realize seu cadastro a seguir</h3>    
             </main>
 
             <section>
