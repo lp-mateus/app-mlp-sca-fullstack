@@ -66,6 +66,10 @@
     line-height: 5rem;
 }
 
+.side-menu-notshow p{
+    display: none;
+}
+
 /* RESPONSIVE */
 @media(max-width:600px){
     .container-link li{display: none};

@@ -9,14 +9,13 @@ const spanColor = {
 
 function Header() {
     // React state
-    const [style, setStyle] = useState();
+    const [style, setStyle] = useState("side-menu-notshow");
     const [links, setLinks] = useState([]);
 
     const handleClick = () => {
         //console.log("you just clicked");
-        
-        setStyle("side-menu");     
-        setLinks(["Link", "Link", "Link", "Link","Link"]);   
+        setStyle(style === "side-menu-notshow" ? "side-menu" : "side-menu-notshow");     
+        setLinks(["Link", "Link", "Link", "Link", "Link"]);   
     }
 
     return(        
