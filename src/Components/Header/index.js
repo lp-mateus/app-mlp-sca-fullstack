@@ -13,9 +13,10 @@ function Header() {
     const [links, setLinks] = useState([]);
 
     const handleClick = () => {
-        console.log("you just clicked");
+        //console.log("you just clicked");
+        
         setStyle("side-menu");     
-        setLinks(["Link", "Link", "Link", "Link","Link"])   
+        setLinks(["Link", "Link", "Link", "Link","Link"]);   
     }
 
     return(        
@@ -60,8 +61,8 @@ function Header() {
                         <div className={style}>
                             <img src={ICON_MENU} alt="Icone de menu"></img>
                             <div>
-                            {links.map(element => {
-                                return(<p>{element}</p>)                                    
+                            {links.map((element, key) => {
+                                return(<p key={key}>{element}</p>)                                    
                             })}
                             </div>
                         </div>                        

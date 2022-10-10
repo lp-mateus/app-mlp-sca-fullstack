@@ -4,8 +4,9 @@ import './Card.css';
 function Card(props) {
     return(
         <div className='card-container'>
-            <h3>{props.titulo}</h3>
-            <p>lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor</p>
+            <img src={props.image} alt="Icone de background" className='icon-resize'></img>
+            <h1>{props.titulo}</h1>
+            <p>{props.description}</p>
         </div>
     )
 }

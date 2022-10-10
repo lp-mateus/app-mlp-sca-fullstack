@@ -1,7 +1,7 @@
 .card-container{
     /* util */
-    width: 20rem;
-    height: 17.5rem;
+    width: 25rem;
+    height: 27.5rem;
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,21 @@
     box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
 
-.card-container h3{
+.card-container:hover{
+    cursor: pointer;
+    background-color: rgba(190, 190, 190, 0.70);
+}
+
+/* STYLES */
+.card-container h1{
     color: #2B88D9;;
+}
+
+.card-container p{
+    font-size: 1.25rem;
+}
+
+.icon-resize{
+    width: 55%;
+    padding-left: 5rem;
 }
