@@ -1,4 +1,5 @@
 // CSS
+import './Userlista.css';
 
 // SERVICES
 import { useEffect, useState } from "react";
@@ -10,36 +11,41 @@ function UserLista() {
     useEffect(() => {
         // chamada método GET - API Github
         getUsersGithub("lp-mateus");
-    });
+        
+        // atualiza estado dos dados 
+        const handleDados = () => {
+            let array = [];
+            let aux = JSON.parse(localStorage.getItem('dadosUsuarioGithub'));
+            array.push(aux);
 
-    // método dados localstorage
-    const handleDadosUsuario = () => {
-        // manipula dados
-        let array = [];
-        let aux = JSON.parse(localStorage.getItem('dadosUsuarioGithub'));
-        array.push(aux);
+            // atualiza estado
+            setDadosUsuario(array);
+        }
+        handleDados();
 
-        console.log(`ARRAY AUX: ${aux}`);
-
-        // atualiza estado
-        setDadosUsuario(array);
-    }
+    }, []);
 
     return(
         <>
-            <section>
-                <div>
-                    <h3>Informações usuários</h3>
-                    {dadosUsuario.map((dado, key) => {
+            <section className='default-container'>
+                <div className='bg-userlista'>
+                    {dadosUsuario.map((dado) => {
                         return(
-                            <ul key={key}>
+                            <>
+                            <h3>USUÁRIO</h3>
+                            <ul>
+                                <li>{dado.id}</li>
                                 <li>{dado.name}</li>
+                                <li>{dado.location}</li>
+                                <li>{dado.login}</li>
+                                <li>{dado.blog}</li>
                             </ul>
+                            </>
                         )
                     })}
                 </div>
                 <br></br>
-                <button onClick={handleDadosUsuario}>GET</button>
+                
             </section>
         </>
     )

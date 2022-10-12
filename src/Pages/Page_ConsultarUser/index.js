@@ -2,7 +2,7 @@
 import './Consultar.css';
 
 // COMPONENTS
-//import UserInfo from '../../Components/UserInfo';
+import UserLista from '../../Components/UserLista';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 
@@ -29,6 +29,7 @@ function PageConsultarUser() {
                 <button type='submit' form='form-consultar'>Consultar</button>
             </section>
             <br></br>
+            <UserLista />
             <Footer />
         </>
     )
