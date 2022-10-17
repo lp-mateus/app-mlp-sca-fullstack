@@ -7,6 +7,9 @@ import BG_ICON from "../../Assets/bg-icon.jpg";
 // CSS
 import './Home.css';
 
+// REACT
+import { Link } from "react-router-dom";
+
 const spanColor = {
     color: "#2B88D9",
 }
@@ -22,7 +25,9 @@ function PageHome() {
             </main>
 
             <section className='container-button'>
-                <button>ACESSAR</button>
+                <Link to='/cadastro'>
+                    <button>ACESSAR</button>
+                </Link>
             </section>
 
             <section className='container-card'>

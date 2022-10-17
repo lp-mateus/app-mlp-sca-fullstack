@@ -26,3 +26,9 @@ button{
 button:hover{
   transform: scale(1.25);
 }
+
+.link{
+  text-decoration: none;
+}
+
+

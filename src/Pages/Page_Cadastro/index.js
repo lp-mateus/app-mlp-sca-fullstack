@@ -5,6 +5,9 @@ import './Cadastro.css';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 
+// REACT
+import { Link } from 'react-router-dom';
+
 const spanColor = {
     color: "#2B88D9",
 }
@@ -44,8 +47,10 @@ function PageCadastro() {
 
             <br></br>
 
-            <section>                
-                <button>Login</button>
+            <section>            
+                <Link to='/menu'>    
+                    <button>Login</button>
+                </Link>
                 <p>Já possui cadastro? Então é só realizar o login...</p>
             </section>
             <Footer />

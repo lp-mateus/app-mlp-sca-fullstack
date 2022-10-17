@@ -8,6 +8,7 @@ import ICON_CONFIG from '../../Assets/icon-config.png';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import Card from '../../Components/Card';
+import { Link } from 'react-router-dom';
 
 const spanColor = {
     color: "#2B88D9",
@@ -25,7 +26,9 @@ function PageMenu() {
             <br></br>
             <section className='cards-container'>
                 <Card titulo="Cadastrar usuário" image={ICON_CREATE} description="Realize o cadastro dos seus clientes"/>
-                <Card titulo="Consultar usuário" image={ICON_SEARCH} description="Realize o cadastro dos seus clientes"/>
+                <Link to='/consultar' className='link'>
+                    <Card titulo="Consultar usuário" image={ICON_SEARCH} description="Realize o cadastro dos seus clientes"/>
+                </Link>
                 <Card titulo="Gerenciar usuário" image={ICON_CONFIG} description="Realize o cadastro dos seus clientes"/>
             </section>
             <br></br>
