@@ -14,7 +14,15 @@ const spanColor = {
 }
 
 function PageConsultarUser() {
+    const [flag, setFlag] = useState(false);
     const [nameInput, setNameInput] = useState("");
+
+    // método input
+    const handleInput = (event) => {
+        event.preventDefault();
+        console.log("INPUT FINAL: " + nameInput);
+        setFlag(flag === false ? true : false);
+    }
 
     return(
         <>
@@ -26,22 +34,28 @@ function PageConsultarUser() {
                 </main>
                 <br></br>
                 <section>
-                    <form id='form-consultar' name='form-consultar' className='form-consultar-container'>
+                    <form id='form-consultar' name='form-consultar' className='form-consultar-container' onSubmit={handleInput}>
                         <label>Nome completo do usuário:</label>
                         <input 
                             id='nome-consultar' 
                             name='nome-consultar' 
                             type='text' 
-                            placeholder="Fulando da Silva..." 
+                            placeholder="Maria da Silva..." 
                             required
                             onChange={(event) => setNameInput(event.target.value)}
                         >
                         </input>
                     </form>
-                    <button type='submit' form='form-consultar' onClick={console.log(nameInput)}>Consultar</button>
+                    <br></br>
+                    <button type='submit' form='form-consultar'>Consultar</button>
                 </section>
                 <br></br>
-                <UserLista nome="lp-mateus"/>
+                <br></br>
+                <br></br>
+                {flag === false ? console.log("NULL") : <UserLista nome={nameInput}/>}
+                <br></br>
+                <br></br>
+                <br></br>
             <Footer />
         </>
     )

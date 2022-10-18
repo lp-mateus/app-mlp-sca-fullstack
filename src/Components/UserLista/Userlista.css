@@ -16,6 +16,7 @@
     /* style */
     background-color: #F5F5F5;
     border-radius: 1rem;
+    box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.1);
 }
 
 .bg-userlista h3{
