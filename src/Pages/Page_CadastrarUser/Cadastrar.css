@@ -1,31 +1,28 @@
-.form-container{
-    /* position */
+.form-cadastrar-container{
+    padding: 1rem;
     margin: 1rem;
-    padding: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* style */
-    background-color: #2B88D9;
-    border-radius: 2rem;
-    border-style: none;
 }
 
-.form-container label{
+.form-cadastrar-container label{
+    line-height: 2.5rem;
     font-size: 1.25rem;
-    color: #FFFFFF;
+    color: #000000;
 }
 
-.form-container input{
+.form-cadastrar-container input{
     width: 100%;
     height: 2.5rem;
     background: #F4F4F4;
     border: 1px solid #CFCFCF;
     text-align: start;
+    color: #000000;
 }
 
-.img-resize{
-    width: 50%;
-    border-radius: 2rem;
+input:nth-child(8){
+    height: 10rem;
 }
+

@@ -11,7 +11,7 @@
     height: 17.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     /* style */
     background-color: #F5F5F5;
@@ -20,6 +20,7 @@
 }
 
 .bg-userlista h3{
+    margin-top: 1.5rem;
     color: #2B88D9;
 }
 

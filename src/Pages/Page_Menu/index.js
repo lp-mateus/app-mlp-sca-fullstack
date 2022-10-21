@@ -25,10 +25,14 @@ function PageMenu() {
             </main>
             <br></br>
             <section className='cards-container'>
-                <Card titulo="Cadastrar usuário" image={ICON_CREATE} description="Realize o cadastro dos seus clientes"/>
-                <Link to='/consultar' className='link'>
+                <Link to='/usuario/cadastrar' className='link'>
+                    <Card titulo="Cadastrar usuário" image={ICON_CREATE} description="Realize o cadastro dos seus clientes"/>
+                </Link>
+
+                <Link to='/usuario/consultar' className='link'>
                     <Card titulo="Consultar usuário" image={ICON_SEARCH} description="Realize o cadastro dos seus clientes"/>
                 </Link>
+
                 <Card titulo="Gerenciar usuário" image={ICON_CONFIG} description="Realize o cadastro dos seus clientes"/>
             </section>
             <br></br>

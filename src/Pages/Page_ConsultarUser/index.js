@@ -46,7 +46,6 @@ function PageConsultarUser() {
                         >
                         </input>
                     </form>
-                    <br></br>
                     <button type='submit' form='form-consultar'>Consultar</button>
                 </section>
                 <br></br>
